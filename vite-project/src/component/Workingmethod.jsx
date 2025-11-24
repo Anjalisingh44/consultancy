@@ -1,89 +1,95 @@
 // src/components/Workingmethod.jsx
-import React,{ useRef } from 'react';
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
-import appointmentImg from '../assets/invoice.png';
-import confirmImg from '../assets/online.png';
-import arriveImg from '../assets/real-time.png';
-import solvedImg from '../assets/problem-solving.png';
-import billingImg from '../assets/file.png';
-import { motion, useInView } from 'framer-motion';
-
+// Study Abroad Icons
+import counselingImg from "../assets/counseling.png";
+import universityImg from "../assets/university.png";
+import documentationImg from "../assets/document.png";
+import visaImg from "../assets/visa.png";
+import departureImg from "../assets/departure.png";
 
 const steps = [
   {
-    title: 'Make an Appointment',
-    description: 'To make the appointment, fill the form with your problem or call us.',
-    image: appointmentImg,
+    title: "Free Counseling",
+    description: "Speak with expert advisors to choose the right country and course.",
+    image: counselingImg,
   },
   {
-    title: 'Confirm',
-    description: 'The Homebizz team will call and verify your order shortly.',
-    image: confirmImg,
+    title: "University Shortlisting",
+    description: "We help you select the best-fit universities for your goals.",
+    image: universityImg,
   },
   {
-    title: 'Arrive Within Time',
-    description: 'After verifying your order, we’ll arrive within hours.',
-    image: arriveImg,
+    title: "Documentation Support",
+    description: "SOP, LOR, applications — we prepare everything professionally.",
+    image: documentationImg,
   },
   {
-    title: 'Your Problem Solved',
-    description: 'Our experts fix your issue with care, no damage done.',
-    image: solvedImg,
+    title: "Visa Guidance",
+    description: "End-to-end visa preparation, mock interviews, and submission.",
+    image: visaImg,
   },
   {
-    title: 'Billing',
-    description: 'We charge based on our standard rates — discounts apply.',
-    image: billingImg,
+    title: "Pre-Departure Support",
+    description: "Guidance for travel, accommodation, and settling abroad.",
+    image: departureImg,
   },
 ];
+
+// Animation
 const containerVariants = {
-  hidden: {}, // no animation needed on container itself
+  hidden: {},
   visible: {
-    transition: {
-      staggerChildren: 0.9, // children appear one by one, each delayed by 0.3s
-    }
-  }
+    transition: { staggerChildren: 0.3 },
+  },
 };
 
-// Child variants define how each feature animates
 const childVariants = {
-  hidden: { x: -200, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.8 } }
+  hidden: { y: 60, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.7 } },
 };
-
-
 
 const Workingmethod = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  return (
-    <section className="w-screen bg-gradient-to-br from-white via-sky-50 to-white text-black ">
-      <div className="px-6 max-w-[1400px] mx-auto">
-        <h2 className="text-2xl text-cyan-600 font-bold text-center mb-12">
-          Homebizz Working Process
-        </h2>
-        <motion.div 
-        ref={ref} 
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8"
-        
-        variants={containerVariants}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}>
-                
 
+  return (
+    <section className="w-full py-10 bg-gradient-to-b from-white via-[#f3f7ff] to-white">
+      <div className="px-6 max-w-[1500px] mx-auto">
+        
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text 
+                       bg-gradient-to-r from-[#2ea4ff] to-[#7b3ff2] text-center mb-14">
+          Our Study Abroad Process
+        </h2>
+
+        {/* Steps */}
+        <motion.div
+          ref={ref}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
           {steps.map((step, index) => (
             <motion.div
-            key={index}
-             className="text-center p-4 bg-white rounded-xl shadow"
-              variants={childVariants}  >
-            
-              <img
-                src={step.image}
-                alt={step.title}
-                className="w-16 h-16 mx-auto mb-3 object-contain"
-              />
-              <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-              <p className="text-sm">{step.description}</p>
+              key={index}
+              variants={childVariants}
+              className="group text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl
+                         transition-all duration-500 hover:-translate-y-2 border border-[#e4e9ff]"
+            >
+              <div className="w-28 h-28 mx-auto mb-4 flex items-center justify-center rounded-full 
+                              bg-gradient-to-br from-[#2ea4ff]/10 to-[#7b3ff2]/10 shadow-inner">
+                <img
+                  src={step.image}
+                  alt={step.title}
+                  className="w-16 h-16 object-contain group-hover:scale-110 transition duration-300"
+                />
+              </div>
+
+              <h3 className="text-lg font-semibold text-[#2f327d]">{step.title}</h3>
+              <p className="text-sm text-gray-600 mt-2 leading-relaxed">{step.description}</p>
             </motion.div>
           ))}
         </motion.div>

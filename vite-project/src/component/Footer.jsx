@@ -8,7 +8,7 @@ import { IoLocationSharp } from "react-icons/io5";
 
 const Footer = () => {
   return (
-    <footer className="bg-cyan-600 text-white py-12 px-4 lg:px-16">
+    <footer className="bg-gradient-to-r from-[#2ea4ff] to-[#7b3ff2] text-white py-12 px-4 lg:px-16">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
         {/* Logo + Description */}
@@ -57,11 +57,11 @@ const Footer = () => {
 
             <div className="flex items-center gap-2">
                         <FaPhone className="text-lime-600 text-xl" />
-                        <span>+977 9709848068, +977 9861281739</span>
+                        <span>+977 9861705553, +977 9761140183</span>
                       </div>
             <div className="flex items-center gap-2">
                        <FaEnvelope className="text-lime-600 text-xl" />
-                       <span>homebizzeng@gmail.com</span>
+                       <span>agartha.edu@gmail.com</span>
                      </div>
              
            
@@ -113,7 +113,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-white mt-10 pt-6 text-sm text-white flex flex-col lg:flex-row justify-between items-center">
-        <p>&copy; {new Date().getFullYear()} Homebizz. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Agartha. All rights reserved.</p>
         <div className="space-x-4 mt-4 lg:mt-0">
           <a href="#" className="hover:text-white">Terms of Use</a>
           <span>|</span>
