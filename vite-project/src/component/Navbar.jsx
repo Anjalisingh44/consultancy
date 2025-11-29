@@ -21,9 +21,9 @@ const Navbar = () => {
   const navLinks = [
     { label: 'Home', href: '/#home' },
     { label: 'About', href: '/#about' },
-    { label: 'Destinations', href: '/#ourservices' },
-    { label: 'Success', href: '/#projects' },
-    { label: 'Working Method', href: '/#Team' },
+    { label: 'Destinations', href: '/#destinations' },
+    { label: 'Trusted Section', href: '/#trusted' },
+    { label: 'Working Method', href: '/#working-method' },
     { label: 'Contact', href: '/#contact' },
     { label: 'FAQ', href: '/#faq' },
   ];
@@ -47,19 +47,19 @@ const Navbar = () => {
 
         {/* Right: Social Icons */}
         <div className="ml-auto flex items-center gap-4 text-xl">
-           <a href="https://www.facebook.com/share/19i8F9CGmT/" target="_blank" rel="noopener noreferrer">
+           <a href="https://www.facebook.com/people/Agartha-Education-Foundation/61584044075603/?share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DMPATFmCG%2F" target="_blank" rel="noopener noreferrer">
               <FaFacebookF className="hover:text-gray-300 cursor-pointer" />
             </a>
             <a href="https://www.instagram.com/homebizzengineering?igsh=ZTlhNnlzcnkyeDV2" target="_blank" rel="noopener noreferrer">
            <FaInstagram className="hover:text-gray-300 cursor-pointer" />
             </a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <FaLinkedinIn className="hover:text-gray-300 cursor-pointer" />
             </a>
-            <a href="https://www.tiktok.com/@homebizz_engineering?_t=ZS-8yhN4oCS9ie&_r=1" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
               <FaTiktok className="hover:text-gray-300 cursor-pointer" />
             </a>
-            <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/9861705553" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="hover:text-gray-300 cursor-pointer" />
             </a>
                     

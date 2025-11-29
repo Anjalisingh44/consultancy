@@ -27,11 +27,10 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold text-lg mb-4">Company</h3>
           <ul className="space-y-2 text-sm text-white">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Study Abroad Guidance</a></li>
+            <li><a href="#">Visa & Immigration Assistance</a></li>
+            <li><a href="#">International Career Consulting</a></li>
+          
           </ul>
         </div>
 
@@ -39,10 +38,10 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold text-lg mb-4">Services</h3>
           <ul className="space-y-2 text-sm text-white">
-            <li>Build & Design</li>
-            <li>Renovation</li>
-            <li>Interior-Design</li>
-            <li>Architectural & Structural Design</li>
+            <li>Guidance</li>
+            <li>Financial Support</li>
+            <li>Carrer consulting</li>
+           
           
           </ul>
         </div>
@@ -52,7 +51,7 @@ const Footer = () => {
             
              <div className="flex items-center gap-2">
                      <IoLocationSharp className="text-lime-600 text-xl font-bold" />
-                       <span>Balkumari,Kathmandu</span>
+                       <span>Baneshwor, Near Bicc hall</span>
                      </div>
 
             <div className="flex items-center gap-2">
@@ -76,16 +75,16 @@ const Footer = () => {
           <h3 className="font-semibold text-lg mb-4">Stay Connected</h3>
           <div className="flex space-x-3 mb-5 text-white text-xl">
             
-           <a href="https://www.facebook.com/share/19i8F9CGmT/" target="_blank" rel="noopener noreferrer">
+           <a href="https://www.facebook.com/people/Agartha-Education-Foundation/61584044075603/?share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DMPATFmCG%2F" target="_blank" rel="noopener noreferrer">
     <FaFacebookF />
   </a>
-  <a href="https://www.instagram.com/homebizzengineering?igsh=ZTlhNnlzcnkyeDV2" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
     <FaInstagram />
   </a>
-  <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
     <FaLinkedinIn />
   </a>
-  <a href="https://www.tiktok.com/@homebizz_engineering?_t=ZS-8yhN4oCS9ie&_r=1" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
     <FaTiktok />
   </a>
   <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer">

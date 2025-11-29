@@ -84,12 +84,12 @@ const Contactus = () => {
           >
             <h2 className="text-2xl font-bold mb-2">LET'S HAVE A TALK</h2>
             <p className="mb-6 text-sm lg:text-base">
-              Contact Homebizz Engineering to start building your dream project today.
+             Connect with Consultanchy Agartha today and turn your vision into reality
             </p>
             <div className="space-y-4 text-sm">
               <div className="flex items-center gap-3">
                 <FaMapMarkerAlt className="text-lime-600" />
-                <span>Balkumari, Kathmandu</span>
+                <span>Baneshwor,Kathmandu</span>
               </div>
               <div className="flex items-center gap-3">
                 <FaPhoneAlt className="text-lime-600" />
@@ -118,7 +118,7 @@ const Contactus = () => {
            <h2 className="text-2xl font-semibold mb-8 text-center bg-gradient-to-r from-[#2ea4ff] to-[#7b3ff2] text-transparent bg-clip-text font-bold">Our Location</h2>
       <iframe
         title="Kathmandu Map"
-      src="https://www.google.com/maps?q=27.672000,85.344944&hl=en&z=15&output=embed"
+       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1766.4271964469513!2d85.33701348310427!3d27.69089486034547!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1996e671e06d%3A0xe08613032eff9ee1!2sBibhuti%20Janak%20Marg%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1764430873884!5m2!1sen!2snp" 
         width="100%"
         height="500"
         className="rounded-md"

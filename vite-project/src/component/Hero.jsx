@@ -43,11 +43,6 @@ const Hero = () => {
           Agartha Educational Consultancy helps you study in top countries like Australia, UK, USA, and Canada.
           We provide expert guidance for applications, visa processing, and scholarships.
 
-
-          Australia, UK, USA, Canada, and Japan. Expert guidance for applications,
-          Australia, UK, USA, Canada, and Japan. Expert guidance for applications,
-
-          visa processing, and scholarships.
         </motion.p>
 
         <motion.button

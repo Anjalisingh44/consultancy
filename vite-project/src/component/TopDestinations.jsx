@@ -1,10 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import sydney from '../assets/sydney.png'
-import UK from '../assets/UK.png'
-import USA from '../assets/USA.png'
-import canada from '../assets/canada.jpeg'
-import japan from '../assets/japan.jpeg'
+import sydney from '../assets/sydney.png';
+import UK from '../assets/UK.png';
+import USA from '../assets/USA.png';
+import canada from '../assets/canada.jpeg';
 
 const destinations = [
   {
@@ -12,12 +11,6 @@ const destinations = [
     img: sydney,
     desc: "World-class education, high visa approval, and flexible post-study work options.",
   },
-   {
-    country: "Japan",
-    img: japan,
-    desc: "Modern technology-driven education with affordable tuition fees.",
-  },
-  
   {
     country: "United Kingdom",
     img: UK,
@@ -28,7 +21,6 @@ const destinations = [
     img: USA,
     desc: "Innovative learning, endless opportunities, and diverse academic programs.",
   },
- 
   {
     country: "Canada",
     img: canada,
@@ -38,7 +30,7 @@ const destinations = [
 
 const TopDestinations = () => {
   return (
-    <section className="w-full py-6 bg-gradient-to-b from-white via-[#f3f7ff] to-white">
+    <section id="destinations" className="w-full py-6 bg-gradient-to-b from-white via-[#f3f7ff] to-white">
       <div className="max-w-8xl mx-auto text-center px-5">
 
         {/* Heading */}
@@ -63,7 +55,7 @@ const TopDestinations = () => {
         </motion.p>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-2 mt-14">
+        <div className="grid gap-4 mt-14 grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
           {destinations.map((item, index) => (
             <motion.div
               key={index}
@@ -71,7 +63,6 @@ const TopDestinations = () => {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-
               className="group relative h-64 rounded-2xl overflow-hidden border border-[#e4e9ff] shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.03] transition-all duration-500"
             >
               {/* Background Image */}
@@ -89,20 +80,18 @@ const TopDestinations = () => {
               </h3>
 
               {/* Description Reveal (Bottom → Up) */}
-             {/* Description (Hidden Until Hover – slide up effect) */}
-<div className="absolute bottom-0 w-full overflow-hidden h-20 pointer-events-none">
-  <p
-    className="
-      text-white text-sm leading-relaxed px-4 pb-4 
-      translate-y-20 opacity-0
-      group-hover:translate-y-0 group-hover:opacity-100
-      transition-all duration-500
-    "
-  >
-    {item.desc}
-  </p>
-</div>
-
+              <div className="absolute bottom-0 w-full overflow-hidden h-20 pointer-events-none">
+                <p
+                  className="
+                    text-white text-sm leading-relaxed px-4 pb-4 
+                    translate-y-20 opacity-0
+                    group-hover:translate-y-0 group-hover:opacity-100
+                    transition-all duration-500
+                  "
+                >
+                  {item.desc}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

@@ -5,10 +5,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="w-full py-20 bg-gradient-to-b from-white via-[#e9f3ff] to-white">
+    <section id="about" className="w-full py-20 bg-gradient-to-b from-white via-[#e9f3ff] to-white">
       <div className="max-w-6xl mx-auto text-center px-5">
         <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2ea4ff] to-[#7b3ff2]">
-          Welcome to Agartha Global Education
+          Welcome to Agartha Education Foundation
         </h1>
 
         <h2 className="text-2xl md:text-3xl font-semibold mt-4 text-gray-800">

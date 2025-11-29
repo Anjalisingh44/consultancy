@@ -55,7 +55,7 @@ const Workingmethod = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className="w-full py-10 bg-gradient-to-b from-white via-[#f3f7ff] to-white">
+    <section id="working-method" className="w-full py-10 bg-gradient-to-b from-white via-[#f3f7ff] to-white">
       <div className="px-6 max-w-[1500px] mx-auto">
         
         {/* Heading */}

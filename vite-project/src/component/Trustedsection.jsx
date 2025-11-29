@@ -3,7 +3,7 @@ import heroImg from "../assets/background.jpeg"; // your hero background image
 
 const Trustedsection = () => {
   return (
-    <section className="relative w-full h-[90vh] flex items-center justify-center py-6">
+    <section id="trusted" className="relative w-full h-[90vh] flex items-center justify-center py-6">
 
       {/* Background Image */}
       <img
