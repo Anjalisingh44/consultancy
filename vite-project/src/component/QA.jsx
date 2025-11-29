@@ -1,79 +1,85 @@
-import React, { useState,useRef} from "react";
-import { motion, useInView } from 'framer-motion';
-
+import React, { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const faqs = [
   {
-    question: "❶ HomeBizz सेवा कसरी काम गर्छ ?",
+    question: "1. What services do you provide for studying abroad?",
     answer:
-      "हामी अनुभवी इन्जिनियर र प्राविधिकहरूको टोलीबाट तपाईंको समस्या मूल्याङ्कन गर्छौं, समाधान योजना बनाउँछौं र तय गरिएको समयमा सेवा प्रदान गर्छौं।",
+      "We offer complete guidance including counseling, university selection, documentation, application processing, visa assistance, and pre-departure support.",
   },
-  
   {
-    question:
-      "❷ मेरोमा inspection गर्नु पर्दैन, समस्या पहिल्यै थाहा छ। काम मात्र गर्नु पर्छ भने पनि HomeBizz ले गर्छ ?",
+    question: "2. Am I eligible to study abroad?",
     answer:
-      "हो, यदि समस्या पहिले नै स्पष्ट छ भने हामी सिधै कामको लागि सेवा दिन सक्छौं।",
+      "Eligibility depends on your academic background, English proficiency, financial readiness, and the country or program you choose.",
   },
- 
- 
   {
-    question: " ❸ किन HomeBizz सँगै काम गर्ने ?",
+    question: "3. Which countries can I apply to through your consultancy?",
     answer:
-      "हामी इमानदार, दक्ष र समयमै सेवा दिने हो। तपाईंको सन्तुष्टि नै हाम्रो प्राथमिकता हो।",
-     
+      "We assist with applications to the USA, UK, Australia, Canada, Japan, South Korea, and many European countries.",
+  },
+  {
+    question: "4. How long does the application and visa process take?",
+    answer:
+      "Processing time varies by country, but generally ranges from a few weeks to several months. We ensure timely submission to avoid delays.",
+  },
+  {
+    question: "5. What documents are required to apply?",
+    answer:
+      "Common documents include academic transcripts, passport, English test scores, SOP, recommendation letters, financial proof, and a completed application form.",
+  },
+  {
+    question: "6. Do you help with scholarship applications?",
+    answer:
+      "Yes, we guide students in finding and applying for scholarships based on merit, financial need, and university-specific criteria.",
   },
 ];
+
 const containerVariants = {
-  hidden: {}, // no animation needed on container itself
+  hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.9, // children appear one by one, each delayed by 0.3s
-    }
-  }
+      staggerChildren: 0.5,
+    },
+  },
 };
 
-// Child variants define how each feature animates
 const childVariants = {
   hidden: { x: -200, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.8 } }
+  visible: { x: 0, opacity: 1, transition: { duration: 0.8 } },
 };
-
 
 const QA = () => {
   const [openIndex, setOpenIndex] = useState(null);
-
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
   const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true });
 
   return (
-    
     <div className="py-20 bg-gradient-to-br from-white via-sky-50 to-white min-h-screen mt-5" id="faq">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="  text-xl font-bold text-center text-sky-700 mb-12">बारम्बार सोधिने प्रश्नहरू (FAQ)</h2>
+        <h2 className="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-[#2ea4ff] to-[#7b3ff2] mb-12">Frequently Asked Questions (FAQ)</h2>
         <div className="space-y-6">
           {faqs.map((faq, index) => (
             <motion.div
-ref={ref} 
+              ref={ref}
               key={index}
-               variants={containerVariants}
+              variants={containerVariants}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-                
               onClick={() => toggleFAQ(index)}
               className={`transition-all duration-300 transform hover:scale-[1.01] hover:shadow-xl cursor-pointer bg-white border border-gray-200 rounded-xl p-6 shadow-md ${
-                openIndex === index ? " shadow-sky-300" : ""
+                openIndex === index ? "shadow-sky-300" : ""
               }`}
             >
-              <motion.h3
-                  variants={childVariants}
-               className="text-xl font-semibold text-sky-700">{faq.question}</motion.h3>
+              <motion.h3 variants={childVariants} className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#2ea4ff] to-[#7b3ff2]">
+                {faq.question}
+              </motion.h3>
               <div
-                className={`mt-3 text-gray-600 transition-all duration-300 ease-in-out overflow-hidden${
-                  openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0  opacity-0"
+                className={`mt-3 text-gray-600 transition-all duration-300 ease-in-out overflow-hidden ${
+                  openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
                 {faq.answer}

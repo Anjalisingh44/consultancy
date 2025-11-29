@@ -21,9 +21,9 @@ const Navbar = () => {
   const navLinks = [
     { label: 'Home', href: '/#home' },
     { label: 'About', href: '/#about' },
-    { label: 'Services', href: '/#ourservices' },
-    { label: 'Projects', href: '/#projects' },
-    { label: 'Team', href: '/#Team' },
+    { label: 'Destinations', href: '/#ourservices' },
+    { label: 'Success', href: '/#projects' },
+    { label: 'Working Method', href: '/#Team' },
     { label: 'Contact', href: '/#contact' },
     { label: 'FAQ', href: '/#faq' },
   ];
@@ -31,17 +31,17 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md ">
       {/* Top Info Bar */}
-      <div className="bg-cyan-600 hidden lg:flex items-center px-6 py-2 text-sm text-white relative h-[48px]">
+      <div className="bg-gradient-to-r from-[#2ea4ff] to-[#7b3ff2] hidden lg:flex items-center px-6 py-2 text-sm text-white relative h-[48px]">
         {/* Centered Phone & Email */}
         <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-6">
           <div className="flex items-center gap-2">
             <FaPhone className="text-blue-900 text-xl" />
-            <span>+977 9709848068, +977 9861281739</span>
+            <span>+977 9861705553, +977 9761140183</span>
           </div>
           <div className="border-l h-5 border-white"></div>
           <div className="flex items-center gap-2">
             <FaEnvelope className="text-blue-900 text-xl" />
-            <span>homebizzeng@gmail.com</span>
+            <span>agartha.edu@gmail.com</span>
           </div>
         </div>
 
@@ -69,10 +69,10 @@ const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <nav className="h-[60px] px-4 md:px-10 lg:px-20 flex items-center justify-between">
+      <nav className="h-[95px] px-4 md:px-10 lg:px-20 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center w-[145px] h-[45px]">
-          <img src={logo} alt="Logo" className="w-[100px] h-auto px-2" />
+        <div className="flex items-center w-[250px] h-[45px]">
+          <img src={logo} alt="Logo" className="w-[400px] h-auto px-2" />
         </div>
 
         {/* Desktop Menu */}

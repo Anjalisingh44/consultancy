@@ -31,7 +31,7 @@ const Map = () => {
   return (
     <div
       id="leaflet-map"
-      className="w-full h-[200px] rounded-lg overflow-hidden"
+      className="w-full h-auto rounded-lg overflow-hidden"
     ></div>
   );
 };
