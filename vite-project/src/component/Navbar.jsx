@@ -72,7 +72,7 @@ const Navbar = () => {
       <nav className="h-[95px] px-4 md:px-10 lg:px-20 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center w-[250px] h-[45px]">
-          <img src={logo} alt="Logo" className="w-[400px] h-auto px-2" />
+          <img src={logo} alt="Logo" className="w-[100px] h-auto px-2" />
         </div>
 
         {/* Desktop Menu */}
